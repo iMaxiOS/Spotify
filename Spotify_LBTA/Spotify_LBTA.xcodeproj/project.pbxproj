@@ -29,6 +29,7 @@
 		ACFA6BC926BBC46000C3FCE7 /* AudioTrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFA6BC826BBC46000C3FCE7 /* AudioTrack.swift */; };
 		ACFA6BCB26BBC46D00C3FCE7 /* Playlist.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFA6BCA26BBC46D00C3FCE7 /* Playlist.swift */; };
 		ACFA6BCD26BBC47A00C3FCE7 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFA6BCC26BBC47A00C3FCE7 /* UserProfile.swift */; };
+		ACFA6BCF26BBD83900C3FCE7 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFA6BCE26BBD83900C3FCE7 /* Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +57,7 @@
 		ACFA6BC826BBC46000C3FCE7 /* AudioTrack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioTrack.swift; sourceTree = "<group>"; };
 		ACFA6BCA26BBC46D00C3FCE7 /* Playlist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Playlist.swift; sourceTree = "<group>"; };
 		ACFA6BCC26BBC47A00C3FCE7 /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
+		ACFA6BCE26BBD83900C3FCE7 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +142,7 @@
 				ACFA6B9026BBBC5200C3FCE7 /* AppDelegate.swift */,
 				ACFA6B9226BBBC5200C3FCE7 /* SceneDelegate.swift */,
 				ACFA6B9926BBBC5300C3FCE7 /* Assets.xcassets */,
+				ACFA6BCE26BBD83900C3FCE7 /* Extension.swift */,
 			);
 			path = Resourses;
 			sourceTree = "<group>";
@@ -172,9 +175,9 @@
 				ACFA6BBA26BBC33500C3FCE7 /* PlayerViewController.swift */,
 				ACFA6BBC26BBC34600C3FCE7 /* PlaylistViewController.swift */,
 				ACFA6BB826BBC32E00C3FCE7 /* ProfileViewController.swift */,
+				ACFA6BBE26BBC37500C3FCE7 /* SearchResultViewController.swift */,
 				ACFA6BB426BBC30800C3FCE7 /* SettingsViewController.swift */,
 				ACFA6BB626BBC32200C3FCE7 /* WelcomeViewController.swift */,
-				ACFA6BBE26BBC37500C3FCE7 /* SearchResultViewController.swift */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -257,6 +260,7 @@
 				ACFA6B9526BBBC5200C3FCE7 /* HomeViewController.swift in Sources */,
 				ACFA6BC526BBC3F900C3FCE7 /* HapticsManager.swift in Sources */,
 				ACFA6BB326BBC2FF00C3FCE7 /* AuthViewController.swift in Sources */,
+				ACFA6BCF26BBD83900C3FCE7 /* Extension.swift in Sources */,
 				ACFA6BC926BBC46000C3FCE7 /* AudioTrack.swift in Sources */,
 				ACFA6B9126BBBC5200C3FCE7 /* AppDelegate.swift in Sources */,
 				ACFA6BAF26BBC23800C3FCE7 /* LibraryViewController.swift in Sources */,
