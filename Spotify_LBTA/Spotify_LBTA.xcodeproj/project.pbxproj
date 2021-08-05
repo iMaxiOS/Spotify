@@ -30,6 +30,7 @@
 		ACFA6BCB26BBC46D00C3FCE7 /* Playlist.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFA6BCA26BBC46D00C3FCE7 /* Playlist.swift */; };
 		ACFA6BCD26BBC47A00C3FCE7 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFA6BCC26BBC47A00C3FCE7 /* UserProfile.swift */; };
 		ACFA6BCF26BBD83900C3FCE7 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFA6BCE26BBD83900C3FCE7 /* Extension.swift */; };
+		ACFA6BD126BBFDA800C3FCE7 /* AuthResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFA6BD026BBFDA800C3FCE7 /* AuthResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +59,7 @@
 		ACFA6BCA26BBC46D00C3FCE7 /* Playlist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Playlist.swift; sourceTree = "<group>"; };
 		ACFA6BCC26BBC47A00C3FCE7 /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
 		ACFA6BCE26BBD83900C3FCE7 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		ACFA6BD026BBFDA800C3FCE7 /* AuthResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +110,7 @@
 				ACFA6BC826BBC46000C3FCE7 /* AudioTrack.swift */,
 				ACFA6BCA26BBC46D00C3FCE7 /* Playlist.swift */,
 				ACFA6BCC26BBC47A00C3FCE7 /* UserProfile.swift */,
+				ACFA6BD026BBFDA800C3FCE7 /* AuthResponse.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -259,6 +262,7 @@
 				ACFA6BAB26BBC21600C3FCE7 /* TabBarViewController.swift in Sources */,
 				ACFA6B9526BBBC5200C3FCE7 /* HomeViewController.swift in Sources */,
 				ACFA6BC526BBC3F900C3FCE7 /* HapticsManager.swift in Sources */,
+				ACFA6BD126BBFDA800C3FCE7 /* AuthResponse.swift in Sources */,
 				ACFA6BB326BBC2FF00C3FCE7 /* AuthViewController.swift in Sources */,
 				ACFA6BCF26BBD83900C3FCE7 /* Extension.swift in Sources */,
 				ACFA6BC926BBC46000C3FCE7 /* AudioTrack.swift in Sources */,

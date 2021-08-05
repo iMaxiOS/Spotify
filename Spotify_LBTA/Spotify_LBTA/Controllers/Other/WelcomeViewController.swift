@@ -46,7 +46,20 @@ class WelcomeViewController: UIViewController {
     }
     
     private func handleSuccess(success: Bool) {
-        #warning("handle Success Log In")
+        guard success else {
+            let alert = UIAlertController(
+                title: "Ooops",
+                message: "Something went wrong when singing in.",
+                preferredStyle: .alert
+            )
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            return
+        }
+        
+        let tabBarVC = TabBarViewController()
+        tabBarVC.modalPresentationStyle = .fullScreen
+        present(tabBarVC, animated: true)
+        
     }
     
     @objc func didTapSignIn() {
