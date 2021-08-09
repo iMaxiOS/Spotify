@@ -13,10 +13,40 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         setupView()
         setupSettings()
+        fetchData()
     }
+}
+
+//MARK: - Ext View
+extension HomeViewController {
     
     private func setupView() {
         view.backgroundColor = .systemBackground
+    }
+    
+    private func fetchData() {
+        APICaller.shared.getRecommendationsGenres { result in
+            switch result {
+            case .success(let model):
+                let genre = model.genres
+                var seeds = Set<String>()
+
+                while seeds.count < 5 {
+                    if let random = genre.randomElement() {
+                        seeds.insert(random)
+                    }
+                }
+                
+                APICaller.shared.getRecommendations(genres: seeds) { _ in
+
+                }
+
+            case .failure(let error):
+                print("🍎🍎🍎\(error)")
+            }
+        }
+        
+        
     }
     
     private func setupSettings() {
@@ -34,6 +64,5 @@ class HomeViewController: UIViewController {
         profileVC.navigationItem.largeTitleDisplayMode = .never
         navigationController?.pushViewController(profileVC, animated: true)
     }
-
 }
 

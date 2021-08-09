@@ -38,7 +38,7 @@ struct UserProfile: Codable {
 //    let email: String
     let id: String
     let product: String
-    let images: [UserImage]
+    let images: [APIImage]
     let displayName: String
     let explicitContent: [String: Bool]
     let externalUrls: [String: String]
@@ -49,8 +49,4 @@ struct UserProfile: Codable {
         case explicitContent = "explicit_content"
         case externalUrls = "external_urls"
     }
-}
-
-struct UserImage: Codable {
-    let url: String
 }
