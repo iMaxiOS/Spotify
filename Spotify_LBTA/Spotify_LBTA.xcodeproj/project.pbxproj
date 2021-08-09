@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1180146F2D44397002AB1F65 /* Pods_Spotify_LBTA.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1E3F8D21D31434348011997 /* Pods_Spotify_LBTA.framework */; };
+		AC5B6B1D26BD1CDB00529F3C /* SettingsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5B6B1C26BD1CDB00529F3C /* SettingsModel.swift */; };
 		ACFA6B9126BBBC5200C3FCE7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFA6B9026BBBC5200C3FCE7 /* AppDelegate.swift */; };
 		ACFA6B9326BBBC5200C3FCE7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFA6B9226BBBC5200C3FCE7 /* SceneDelegate.swift */; };
 		ACFA6B9526BBBC5200C3FCE7 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFA6B9426BBBC5200C3FCE7 /* HomeViewController.swift */; };
@@ -34,6 +36,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5C14F4675C067E89D87BD1F4 /* Pods-Spotify_LBTA.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Spotify_LBTA.release.xcconfig"; path = "Target Support Files/Pods-Spotify_LBTA/Pods-Spotify_LBTA.release.xcconfig"; sourceTree = "<group>"; };
+		AC5B6B1C26BD1CDB00529F3C /* SettingsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsModel.swift; sourceTree = "<group>"; };
 		ACFA6B8D26BBBC5200C3FCE7 /* Spotify_LBTA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Spotify_LBTA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACFA6B9026BBBC5200C3FCE7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ACFA6B9226BBBC5200C3FCE7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -60,6 +64,8 @@
 		ACFA6BCC26BBC47A00C3FCE7 /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
 		ACFA6BCE26BBD83900C3FCE7 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		ACFA6BD026BBFDA800C3FCE7 /* AuthResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthResponse.swift; sourceTree = "<group>"; };
+		B02782C651AFA4FA6ED7E2D2 /* Pods-Spotify_LBTA.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Spotify_LBTA.debug.xcconfig"; path = "Target Support Files/Pods-Spotify_LBTA/Pods-Spotify_LBTA.debug.xcconfig"; sourceTree = "<group>"; };
+		F1E3F8D21D31434348011997 /* Pods_Spotify_LBTA.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Spotify_LBTA.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,17 +73,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1180146F2D44397002AB1F65 /* Pods_Spotify_LBTA.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		392902752F8B54336D261809 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B02782C651AFA4FA6ED7E2D2 /* Pods-Spotify_LBTA.debug.xcconfig */,
+				5C14F4675C067E89D87BD1F4 /* Pods-Spotify_LBTA.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		7DC76DEE7FCEAB49FC9F3E9D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F1E3F8D21D31434348011997 /* Pods_Spotify_LBTA.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		ACFA6B8426BBBC5200C3FCE7 = {
 			isa = PBXGroup;
 			children = (
 				ACFA6B8F26BBBC5200C3FCE7 /* Spotify_LBTA */,
 				ACFA6B8E26BBBC5200C3FCE7 /* Products */,
+				392902752F8B54336D261809 /* Pods */,
+				7DC76DEE7FCEAB49FC9F3E9D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -111,6 +138,7 @@
 				ACFA6BCA26BBC46D00C3FCE7 /* Playlist.swift */,
 				ACFA6BCC26BBC47A00C3FCE7 /* UserProfile.swift */,
 				ACFA6BD026BBFDA800C3FCE7 /* AuthResponse.swift */,
+				AC5B6B1C26BD1CDB00529F3C /* SettingsModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -192,9 +220,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = ACFA6BA126BBBC5300C3FCE7 /* Build configuration list for PBXNativeTarget "Spotify_LBTA" */;
 			buildPhases = (
+				EAC56F66181AF6AD93E551A5 /* [CP] Check Pods Manifest.lock */,
 				ACFA6B8926BBBC5200C3FCE7 /* Sources */,
 				ACFA6B8A26BBBC5200C3FCE7 /* Frameworks */,
 				ACFA6B8B26BBBC5200C3FCE7 /* Resources */,
+				4DA631AD2C5D7A4D142D508C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -249,6 +279,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4DA631AD2C5D7A4D142D508C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Spotify_LBTA/Pods-Spotify_LBTA-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Spotify_LBTA/Pods-Spotify_LBTA-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Spotify_LBTA/Pods-Spotify_LBTA-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EAC56F66181AF6AD93E551A5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Spotify_LBTA-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		ACFA6B8926BBBC5200C3FCE7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -266,6 +338,7 @@
 				ACFA6BB326BBC2FF00C3FCE7 /* AuthViewController.swift in Sources */,
 				ACFA6BCF26BBD83900C3FCE7 /* Extension.swift in Sources */,
 				ACFA6BC926BBC46000C3FCE7 /* AudioTrack.swift in Sources */,
+				AC5B6B1D26BD1CDB00529F3C /* SettingsModel.swift in Sources */,
 				ACFA6B9126BBBC5200C3FCE7 /* AppDelegate.swift in Sources */,
 				ACFA6BAF26BBC23800C3FCE7 /* LibraryViewController.swift in Sources */,
 				ACFA6BCD26BBC47A00C3FCE7 /* UserProfile.swift in Sources */,
@@ -411,6 +484,7 @@
 		};
 		ACFA6BA226BBBC5300C3FCE7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B02782C651AFA4FA6ED7E2D2 /* Pods-Spotify_LBTA.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -430,6 +504,7 @@
 		};
 		ACFA6BA326BBBC5300C3FCE7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5C14F4675C067E89D87BD1F4 /* Pods-Spotify_LBTA.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
