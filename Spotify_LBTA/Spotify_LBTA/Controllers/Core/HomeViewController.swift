@@ -303,8 +303,9 @@ extension HomeViewController: UICollectionViewDataSource {
             ) as? NewReleaseCollectionViewCell else {
                 return UICollectionViewCell()
             }
-            
-            cell.backgroundColor = .red
+
+            let viewModel = viewModels[indexPath.row]
+            cell.configureCell(with: viewModel)
             
             return cell
         case .featuredPlaylists(let viewModels):
