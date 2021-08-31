@@ -15,7 +15,6 @@ class NewReleaseCollectionViewCell: UICollectionViewCell {
         let image = UIImageView()
         image.image = UIImage(systemName: "photo")
         image.contentMode = .scaleAspectFill
-        image.translatesAutoresizingMaskIntoConstraints = false
         image.clipsToBounds = true
         image.layer.cornerRadius = 5
         return image
@@ -25,7 +24,6 @@ class NewReleaseCollectionViewCell: UICollectionViewCell {
         let label = UILabel()
         label.numberOfLines = 0
         label.font = .systemFont(ofSize: 18, weight: .semibold)
-        label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
     
@@ -33,14 +31,12 @@ class NewReleaseCollectionViewCell: UICollectionViewCell {
         let label = UILabel()
         label.numberOfLines = 0
         label.font = .systemFont(ofSize: 15, weight: .light)
-        label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
     
     private let numberTrackLabel: UILabel = {
         let label = UILabel()
         label.font = .systemFont(ofSize: 12, weight: .thin)
-        label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
     
@@ -54,12 +50,10 @@ class NewReleaseCollectionViewCell: UICollectionViewCell {
     
     let vStackView: UIStackView = {
         let stack = UIStackView()
-        stack.translatesAutoresizingMaskIntoConstraints = false
         stack.axis = .vertical
         stack.spacing = 5
         return stack
     }()
-    
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -83,7 +77,7 @@ class NewReleaseCollectionViewCell: UICollectionViewCell {
         vStackView.setCustomSpacing(10, after: artistNameLabel)
         
         NSLayoutConstraint.activate([
-            albumCoverImageView.widthAnchor.constraint(equalTo: contentView.heightAnchor),
+            albumCoverImageView.widthAnchor.constraint(equalTo: albumCoverImageView.heightAnchor),
             numberTrackLabel.heightAnchor.constraint(equalToConstant: 25),
             
             hStackView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 5),
