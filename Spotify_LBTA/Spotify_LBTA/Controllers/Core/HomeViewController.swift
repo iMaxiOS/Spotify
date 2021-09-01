@@ -15,7 +15,10 @@ enum BrowseSectionType {
 
 class HomeViewController: UIViewController {
     
-    private var sections = [BrowseSectionType]()
+    private var newAlbums: [Album] = []
+    private var playlists: [Playlist] = []
+    private var tracks: [AudioTrack] = []
+    private var sections: [BrowseSectionType] = []
     
     private var collectionView: UICollectionView = UICollectionView(
         frame: .zero,
@@ -235,6 +238,10 @@ extension HomeViewController {
     }
     
     private func configureModels(newAlbums: [Album], playlist: [Playlist], tracks: [AudioTrack]) {
+        self.newAlbums = newAlbums
+        self.playlists = playlist
+        self.tracks = tracks
+        
         sections.append(.newReleases(viewModels: newAlbums.compactMap {
             return NewReleasesCellViewModel(
                 name: $0.name,
@@ -255,7 +262,7 @@ extension HomeViewController {
             return RecommendedTrackCellViewModel(
                 name: $0.name,
                 artistName: $0.artists.first?.name ?? "",
-                artworkURL: URL(string: $0.album.images.first?.url ?? "-")
+                artworkURL: URL(string: $0.album?.images.first?.url ?? "-")
             )
         }))
         
@@ -281,7 +288,20 @@ extension HomeViewController {
 
 //MARK: - Delegate
 extension HomeViewController: UICollectionViewDelegate {
-    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        collectionView.deselectItem(at: indexPath, animated: true)
+        let section = sections[indexPath.section]
+        switch section {
+        case .newReleases:
+            let album = newAlbums[indexPath.row]
+            navigationController?.pushViewController(AlbumViewController(album: album), animated: true)
+        case .featuredPlaylists:
+            let playlist = playlists[indexPath.row]
+            navigationController?.pushViewController(PlaylistViewController(playlist: playlist), animated: true)
+        case .recommendedTracks:
+            break
+        }
+    }
 }
 
 //MARK: - DataSource
