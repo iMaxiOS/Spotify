@@ -24,6 +24,7 @@ class PlaylistViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
+        fetchData()
     }
 }
 
@@ -32,6 +33,15 @@ extension PlaylistViewController {
         title = playlist.name
         navigationItem.largeTitleDisplayMode = .never
         view.backgroundColor = .systemBackground
+    }
+    
+    private func fetchData() {
+        APICaller.shared.getPlaylistDetail(for: playlist) { result in
+            switch result {
+            case .success(let model): break
+            case .failure(let error): break
+            }
+        }
     }
 }
 

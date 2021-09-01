@@ -46,7 +46,6 @@ final class APICaller {
     
     public func getAlbumDetail(for album: Album, completion: @escaping (Result<AlbumDetailsResponse, Error>) -> Void) {
         createRequest(with: URL(string: Constants.baseAPIURL + "/albums/\(album.id)"), type: .GET) { albumDetail in
-            print("🍎🍎🍎\(Constants.baseAPIURL + "/albums/\(album.id)")")
             URLSession.shared.dataTask(with: albumDetail) { data, _, error in
                 guard let data = data, error == nil else {
                     completion(.failure(APIError.failedToGetData))
@@ -55,9 +54,26 @@ final class APICaller {
                 
                 do {
                     let result = try JSONDecoder().decode(AlbumDetailsResponse.self, from: data)
-                    print("🍎🍎🍎\(result)")
+                    completion(.success(result))
                 } catch {
-                    print("🍎🍎🍎\(error)")
+                    completion(.failure(error))
+                }
+            }.resume()
+        }
+    }
+    
+    public func getPlaylistDetail(for playlist: Playlist, completion: @escaping (Result<PlaylistDetailsResponse, Error>) -> Void) {
+        createRequest(with: URL(string: Constants.baseAPIURL + "/playlists/\(playlist.id)"), type: .GET) { playlistDetail in
+            URLSession.shared.dataTask(with: playlistDetail) { data, _, error in
+                guard let data = data, error == nil else {
+                    completion(.failure(APIError.failedToGetData))
+                    return
+                }
+                
+                do {
+                    let result = try JSONDecoder().decode(PlaylistDetailsResponse.self, from: data)
+                    completion(.success(result))
+                } catch {
                     completion(.failure(error))
                 }
             }.resume()
