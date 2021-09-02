@@ -103,7 +103,6 @@ extension PlaylistViewController {
             DispatchQueue.main.async {
                 switch result {
                 case .success(let model):
-                    
                     self?.viewModels = model.tracks.items.compactMap {
                         return RecommendedTrackCellViewModel(
                             name: $0.track.name,
@@ -111,6 +110,7 @@ extension PlaylistViewController {
                             artworkURL: URL(string: $0.track.album?.images.first?.url ?? "")
                         )
                     }
+                    
                     self?.collectionView.reloadData()
                 case .failure(let error):
                     print("🍎🍎🍎\(error.localizedDescription)")
@@ -162,7 +162,14 @@ extension PlaylistViewController: UICollectionViewDataSource {
             return UICollectionReusableView()
         }
         
-        header.configure(with: playlist)
+        let headerViewModel = PlaylistHeaderViewModel(
+            name: playlist.name,
+            ownerName: playlist.owner.display_name,
+            description: playlist.description,
+            artworkURL: URL(string: playlist.images.first?.url ?? "")
+        )
+        
+        header.configure(with: headerViewModel)
         header.delegate = self
         
         return header
