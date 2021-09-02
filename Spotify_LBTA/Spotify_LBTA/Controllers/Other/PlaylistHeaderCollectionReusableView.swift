@@ -120,7 +120,7 @@ extension PlaylistHeaderCollectionReusableView {
     
     public func configure(with model: PlaylistHeaderViewModel) {
         nameLabel.text = model.name
-        descriptionLabel.text = "Release Date: \(model.description)"
+        descriptionLabel.text = model.description
         ownerLabel.text = model.ownerName
         headerImageView.sd_setImage(with: model.artworkURL)
     }
